@@ -1,0 +1,27 @@
+package VentanaPrincipal;
+import javax.swing.*;
+
+/**
+ *
+ * @author Alexander
+ */
+public class VentanaPrincipal extends JFrame
+{
+    public VentanaPrincipal()
+    {
+        setLayout(null);
+        setTitle("Mi Primera Aplicacion Swing");
+        setResizable(false);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+    
+    public static void main(String[] args)
+    {
+        VentanaPrincipal ventana = new VentanaPrincipal();
+        // Centrar pantalla
+        int screenW = java.awt.Toolkit.getDefaultToolkit().getScreenSize().width;
+        int screenH = java.awt.Toolkit.getDefaultToolkit().getScreenSize().height;
+        ventana.setBounds((screenW - 800) / 2, (screenH - 600) / 2, 800, 600);
+        ventana.setVisible(true);
+    }
+}
